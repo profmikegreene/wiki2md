@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wiki2md"
+version = "0.1.0"
+description = "Fetch a MediaWiki page via API and save as Markdown."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Your Name" }]
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.28",
+    # Optional but recommended converters/cleanup:
+    "markdownify>=0.11; python_version >= '3.8'",
+    "beautifulsoup4>=4.11",
+    "html2text>=2020.1.16"
+]
+
+[project.scripts]
+wiki2md = "wiki2md.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["wiki2md"]
