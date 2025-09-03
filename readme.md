@@ -10,10 +10,7 @@ pipx install .
 # or
 pip install -e .
 
-
 ## Usage
-
-```bash
 wiki2md --url "https://forgottenrealms.fandom.com/wiki/Menhir" --outdir . --fix-fandom-images -f Menhir.md
 ```
 
